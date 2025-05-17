@@ -16,6 +16,8 @@
 
 package com.example.reply.data
 
+import android.media.Image
+
 /**
  * A simple data class to represent an Email.
  */
@@ -30,5 +32,7 @@ data class Email(
     var isStarred: Boolean = false,
     var mailbox: MailboxType = MailboxType.INBOX,
     val createdAt: String,
-    val threads: List<Email> = emptyList()
+    val threads: List<Email> = emptyList(),
+    /*TODO: Adding image attribute to email.*/
+    val imageUrl: String? = null
 )

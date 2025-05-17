@@ -133,4 +133,7 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    /* TODO: Josh's added dependencies*/
+    implementation(libs.coil.kt.compose)
 }

@@ -16,6 +16,7 @@
 
 package com.example.reply.data.local
 
+import android.media.Image
 import com.example.reply.R
 import com.example.reply.data.Email
 import com.example.reply.data.EmailAttachment
@@ -129,6 +130,7 @@ object LocalEmailsDataProvider {
             createdAt = "20 mins ago",
             isStarred = true,
             threads = threads,
+            imageUrl = "https://cdn.discordapp.com/attachments/766007493851086858/1371306863404126318/f61ed4f537b42611531f659b18650480.png?ex=68289749&is=682745c9&hm=b208ae92a96d982c3c16465ffea99f3cc3bcee9c657352ed0aa9bebc33857469&",
         ),
         Email(
             id = 1L,
@@ -146,6 +148,7 @@ object LocalEmailsDataProvider {
             """.trimIndent(),
             createdAt = "40 mins ago",
             threads = threads.shuffled(),
+            imageUrl = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQj0an8SyTqSbwtWISsavdajuv5-3RYElQv6D6eS0l6fFiNESzzcbEsxGf58EUKo9JjXr2pliCkf40DiqGLY7Rn5Q"
         ),
         Email(
             2L,

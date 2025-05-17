@@ -89,12 +89,12 @@ fun ReplyEmailListItem(
                 AnimatedContent(targetState = isSelected, label = "avatar") { selected ->
                     if (selected) {
                         SelectedProfileImage(clickModifier)
-                    } else {
-                        ReplyProfileImage(
-                            email.sender.avatar,
-                            email.sender.fullName,
-                            clickModifier
-                        )
+//                    } else {
+//                        ReplyProfileImage(
+//                            email.sender.avatar,
+//                            email.sender.fullName,
+//                            clickModifier
+//                        )
                     }
                 }
 
@@ -138,6 +138,8 @@ fun ReplyEmailListItem(
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
+            /*TODO: FLASK, EMAIL DATA CLASS ADD image url*/
+            ReplyMailImage(email.imageUrl);
         }
     }
 }

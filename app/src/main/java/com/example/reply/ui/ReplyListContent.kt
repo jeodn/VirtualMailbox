@@ -112,7 +112,9 @@ fun ReplyInboxScreen(
                 navigateToDetail = navigateToDetail
             )
             // When we have bottom navigation we show FAB at the bottom end.
+            /*
             if (navigationType == ReplyNavigationType.BOTTOM_NAVIGATION) {
+                /*TODO: its an impossible if statement to remove compose*/
                 ExtendedFloatingActionButton(
                     text = { Text(text = stringResource(id = R.string.compose)) },
                     icon = { Icon(Icons.Default.Edit, stringResource(id = R.string.compose)) },
@@ -126,6 +128,7 @@ fun ReplyInboxScreen(
                         !emailLazyListState.canScrollBackward
                 )
             }
+             */
         }
     }
 }
