@@ -1,0 +1,12 @@
+{ 
+    "id": 1, 
+    "date": "May 28", 
+    "to": "alice@example.com", 
+    "from": "bob@corp.com", 
+    "type": "Promotion", 
+    "starred": false, 
+    "selected": false, 
+    "opened": true, 
+    "thumbnail": "/img/thumb1.jpg", 
+    "contentImage": "/img/opened1.jpg" 
+}

@@ -34,13 +34,16 @@
           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
-
+      
+      <!--TODO: temporarily reroute directly to inbox-->
+      <a href="/inbox"> 
       <button
         type="submit"
         class="w-full flex justify-center py-2 px-4 border border-transparent rounded-xl shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
       >
         Sign In
       </button>
+      </a>
     </form>
 
     <p class="mt-4 text-center text-sm text-gray-600">
