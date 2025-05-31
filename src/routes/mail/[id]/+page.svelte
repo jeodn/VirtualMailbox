@@ -1,8 +1,8 @@
 <script>
     import { page } from '$app/state';
-    import Sidebar from '../../Sidebar.svelte';
-    import Header from '../../Header.svelte';
-	import Toolbar from '../../Toolbar.svelte';
+    import Sidebar from '$lib/components/Sidebar.svelte';
+    import Header from '$lib/components/Header.svelte';
+    import Toolbar from '$lib/components/Toolbar.svelte';
 
     $: mailId = page.params.id;
 </script>
