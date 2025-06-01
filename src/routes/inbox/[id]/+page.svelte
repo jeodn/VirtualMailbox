@@ -6,18 +6,7 @@
   import MailCard from '$lib/components/MailCard.svelte';
   import PreviewPane from '$lib/components/PreviewPane.svelte';
 
-  /** @typedef {{
-    id: number;
-    date: string;
-    to: string;
-    from: string;
-    type: string;
-    starred: boolean;
-    selected: boolean;
-    opened: boolean;
-    thumbnail: string;
-    contentImage: string | null;
-  }} Mail */
+  /** @typedef {import('$lib/types').Mail} Mail */
 
   /** @type {Mail[]} */
   let mails = $state([

@@ -1,3 +1,22 @@
+"""
+### Explanation of `app.py`:
+
+- **`CORS(app)`**: Enables Cross-Origin Resource Sharing so that your SvelteKit front end (likely running on `localhost:5173`) can call this Flask API (on `localhost:5000`) without CORS errors.
+- **In-memory dictionaries (`USERS`, `MAIL`, `REQUESTS`)**:
+    - Each key is the `user_id` (an integer).
+    - `USERS[user_id]` → a `User` object.
+    - `MAIL[user_id]` → an array of `Mail` objects for that user.
+    - `REQUESTS[user_id]` → an array of `UserRequest` objects for that user.
+- **Endpoints**:
+    1. `GET /api/users` → returns `[{id, name, email, avatar}, …]`.
+    2. `GET /api/users/<user_id>` → returns a single `User` or 404.
+    3. `GET /api/users/<user_id>/mail` → returns `Mail[]` for that user.
+    4. `GET /api/users/<user_id>/requests` → returns `UserRequest[]` for that user.
+    5. `POST /api/users/<user_id>/mail` → you send a JSON payload (`date`, `to`, `from`, `type`, `thumbnail`, optionally `contentImage`), and it returns the newly created `Mail` object with a new `id`.
+    6. `PATCH /api/users/<user_id>/mail/<mail_id>` → expects a JSON body like `{ "opened": true, "contentImage": "http://…" }` (you can send either or both fields). It updates that mail item and returns the updated object.
+    7. `DELETE /api/users/<user_id>` → deletes the user and all their mail/requests. Returns a simple message.
+"""
+
 # app.py
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
